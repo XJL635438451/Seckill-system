@@ -37,8 +37,8 @@ type EtcdConf struct {
 //sec product info
 type SecProductInfoConf struct {
     ProductId int
-    StartTime int
-    EndTime   int
+    StartTime int64
+    EndTime   int64
     Status    int
     Total     int
     Left      int

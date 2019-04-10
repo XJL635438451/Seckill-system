@@ -1,31 +1,21 @@
 package common
 
-import (
-    "fmt"
+//product status
+const (
+    ProductStatusNormal       = 0
+    ProductStatusSaleOut      = 1
+    ProductStatusForceSaleOut = 2
 )
-
-var ErrorCodeMsg = make(map[int]string)
 
 //error code
 const (
-    ErrInvalidRequest    = 1001
-    ErrNotFoundProductId = 1002
+    ErrInvalidRequest      = 1001
+    ErrNotFoundProductId   = 1002
+    ErrUserCheckAuthFailed = 1003
+    ErrUserServiceBusy     = 1004
+    ErrActiveNotStart      = 1005
+    ErrActiveAlreadyEnd    = 1006
+    ErrActiveSaleOut       = 1007
+    ErrProcessTimeout      = 1008
+    ErrClientClosed        = 1009
 )
-
-func InitErrorMsg() {
-    ErrorCodeMsg[ErrInvalidRequest] = "Invalid request."
-    ErrorCodeMsg[ErrNotFoundProductId] = "Not find product id."
-}
-
-//err message
-func ErrMsg(errCode int, err interface{}) (errMsg string) {
-    if msg, ok := ErrorCodeMsg[errCode]; ok {
-        errMsg = fmt.Sprintf("%s Error: %v.", msg, err)
-    } else {
-        errMsg = fmt.Sprintf("unknown error code [%d]. Error: %v.", errCode, err)
-    }
-
-    return 
-}
-    
-

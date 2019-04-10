@@ -26,3 +26,81 @@
 2019/04/10 19:47:25.156 [I] [main.go:15]  init sec succ
 2019/04/10 19:47:25.183 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
 2019/04/10 19:47:25.592 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 21:03:16.121 [D] [init.go:191]  Starting to init redis.
+2019/04/10 21:03:16.134 [D] [init.go:191]  Successfully initialized redis.
+2019/04/10 21:03:16.134 [D] [init.go:196]  Starting to init etcd.
+2019/04/10 21:03:16.147 [D] [init.go:196]  Successfully initialized etcd.
+2019/04/10 21:03:16.147 [D] [init.go:201]  Starting to load sec config.
+2019/04/10 21:03:16.468 [D] [init.go:201]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 21:03:16.468 [D] [init.go:201]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 21:03:16.468 [D] [init.go:116]  Temp:map[1029:0xc0002c60c0]
+2019/04/10 21:03:16.468 [D] [init.go:116]  Temp:map[1027:0xc0002c6150 1029:0xc0002c60c0]
+2019/04/10 21:03:16.469 [D] [init.go:201]  Successfully load sec config.
+2019/04/10 21:03:16.469 [D] [init.go:206]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0002c6150 1029:0xc0002c60c0] {{0 0} 0 0 0 0}}
+2019/04/10 21:03:16.469 [I] [main.go:15]  init sec succ
+2019/04/10 21:03:16.480 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 21:03:16.889 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 21:03:51.525 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:21.165 [D] [asm_amd64.s:1337]  get config from etcd, PUT "/taobao/backend/secskill/product" : "[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1554905090,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1554905090,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]"
+
+2019/04/10 21:06:21.165 [D] [asm_amd64.s:1337]  get config from etcd succ, [{1029 1505008800 1554905090 0 1000 1000} {1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:06:21.165 [D] [init.go:178]  Temp:map[1029:0xc0000a6120]
+2019/04/10 21:06:21.165 [D] [init.go:178]  Temp:map[1027:0xc0000a61b0 1029:0xc0000a6120]
+2019/04/10 21:06:40.608 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:43.233 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:43.876 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:44.670 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:45.346 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:46.171 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:46.394 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:49.934 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:06:58.288 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:07:09.287 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:07:45.573 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:10:55.784 [D] [init.go:191]  Starting to init redis.
+2019/04/10 21:10:55.801 [D] [init.go:191]  Successfully initialized redis.
+2019/04/10 21:10:55.801 [D] [init.go:196]  Starting to init etcd.
+2019/04/10 21:10:55.814 [D] [init.go:196]  Successfully initialized etcd.
+2019/04/10 21:10:55.815 [D] [init.go:201]  Starting to load sec config.
+2019/04/10 21:10:56.141 [D] [init.go:201]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:26 version:2 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1554905090,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1554905090,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 21:10:56.141 [D] [init.go:201]  Get sec conf info success. it is [[{1029 1505008800 1554905090 0 1000 1000} {1027 1554905090 1505012400 0 2000 1000}]]
+2019/04/10 21:10:56.142 [D] [init.go:116]  Temp:map[1029:0xc000030420]
+2019/04/10 21:10:56.142 [D] [init.go:116]  Temp:map[1027:0xc0000304b0 1029:0xc000030420]
+2019/04/10 21:10:56.142 [D] [init.go:201]  Successfully load sec config.
+2019/04/10 21:10:56.142 [D] [init.go:206]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0000304b0 1029:0xc000030420] {{0 0} 0 0 0 0}}
+2019/04/10 21:10:56.142 [I] [main.go:15]  init sec succ
+2019/04/10 21:10:56.146 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 21:10:56.549 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 21:11:08.492 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:11:13.778 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:11:18.260 [D] [skill.go:31]  get product[1027]， result[map[end_time:true product_id:1027 start_time:false status:Sec kill is already end.]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:11:18.261 [D] [skill.go:31]  get product[1029]， result[map[end_time:false product_id:1029 start_time:true status:success]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1029 1505008800 1554905090 0 1000 1000}]
+2019/04/10 21:11:18.261 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:11:36.046 [D] [skill.go:31]  get product[1029]， result[map[end_time:false product_id:1029 start_time:true status:success]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1029 1505008800 1554905090 0 1000 1000}]
+2019/04/10 21:11:36.046 [D] [skill.go:31]  get product[1027]， result[map[end_time:true product_id:1027 start_time:false status:Sec kill is already end.]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:11:36.046 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:11:45.223 [D] [skill.go:31]  get product[1029]， result[map[end_time:false product_id:1029 start_time:true status:success]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1029 1505008800 1554905090 0 1000 1000}]
+2019/04/10 21:11:45.223 [D] [skill.go:31]  get product[1027]， result[map[end_time:true product_id:1027 start_time:false status:Sec kill is already end.]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:11:45.227 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0003ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:23:55.647 [D] [init.go:191]  Starting to init redis.
+2019/04/10 21:23:55.662 [D] [init.go:191]  Successfully initialized redis.
+2019/04/10 21:23:55.663 [D] [init.go:196]  Starting to init etcd.
+2019/04/10 21:23:55.684 [D] [init.go:196]  Successfully initialized etcd.
+2019/04/10 21:23:55.684 [D] [init.go:201]  Starting to load sec config.
+2019/04/10 21:23:55.993 [D] [init.go:201]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:26 version:2 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1554905090,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1554905090,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 21:23:55.993 [D] [init.go:201]  Get sec conf info success. it is [[{1029 1505008800 1554905090 0 1000 1000} {1027 1554905090 1505012400 0 2000 1000}]]
+2019/04/10 21:23:55.993 [D] [init.go:116]  Temp:map[1029:0xc000030420]
+2019/04/10 21:23:55.993 [D] [init.go:116]  Temp:map[1027:0xc0000304b0 1029:0xc000030420]
+2019/04/10 21:23:55.993 [D] [init.go:201]  Successfully load sec config.
+2019/04/10 21:23:55.993 [D] [init.go:206]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0000304b0 1029:0xc000030420] {{0 0} 0 0 0 0}}
+2019/04/10 21:23:55.994 [I] [main.go:15]  init sec succ
+2019/04/10 21:23:56.006 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 21:23:56.554 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 21:24:00.839 [D] [skill.go:32]  get product[1029]， result[map[end_time:false product_id:1029 start_time:true status:success]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1029 1505008800 1554905090 0 1000 1000}]
+2019/04/10 21:24:00.839 [D] [skill.go:32]  get product[1027]， result[map[end_time:true product_id:1027 start_time:false status:Sec kill is already end.]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:24:00.854 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    15.0009ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:24:01.763 [D] [skill.go:32]  get product[1029]， result[map[end_time:false product_id:1029 start_time:true status:success]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1029 1505008800 1554905090 0 1000 1000}]
+2019/04/10 21:24:01.763 [D] [skill.go:32]  get product[1027]， result[map[end_time:true product_id:1027 start_time:false status:Sec kill is already end.]], all[map[1027:0xc0000304b0 1029:0xc000030420]] v[&{1027 1554905090 1505012400 0 2000 1000}]
+2019/04/10 21:24:01.763 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:24:05.931 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 21:24:13.006 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo

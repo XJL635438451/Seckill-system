@@ -42,7 +42,7 @@ func SetLogConfToEtcd() {
         SecInfoConf{
             ProductId: 1029,
             StartTime: 1505008800,
-            EndTime:   1505012400,
+            EndTime:   1554905090,
             Status:    0,
             Total:     1000,
             Left:      1000,
@@ -53,7 +53,7 @@ func SetLogConfToEtcd() {
         SecInfoConfArr,
         SecInfoConf{
             ProductId: 1027,
-            StartTime: 1505008800,
+            StartTime: 1554905090,
             EndTime:   1505012400,
             Status:    0,
             Total:     2000,
