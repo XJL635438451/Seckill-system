@@ -121,7 +121,13 @@ func loadSecConf() (err error) {
 func updateSecProductInfo(secProductInfo []common.SecProductInfoConf) {
     var tmpProductInfoMap map[int]*common.SecProductInfoConf = make(map[int]*common.SecProductInfoConf, 1024)
     for _, v := range secProductInfo {
-        tmpProductInfoMap[v.ProductId] = &v
+        product := v
+        tmpProductInfoMap[v.ProductId] = &product
+        //tmpProductInfoMap[v.ProductId] = &product //this is a bug
+        //example: secProductInfo -> [{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]
+        //wait loop end : tmpProductInfoMap -> map[1027:0xc000180840 1029:0xc000180840], 1027 addr is the same as 1029
+        //because v is variable and its add is invariable.
+        logs.Debug("Temp:%v",tmpProductInfoMap)
     }
 
     secKillConf.RWSecProductLock.Lock()
