@@ -3,15 +3,21 @@ package main
 import (
     "github.com/astaxie/beego"
     "github.com/astaxie/beego/logs"
-    _ "go_dev/SecKill/SecProxy/router"
+    _ "MyGitHubProject/SrcKillProject/Seckill-system/SecProxy/router"
 )
 
 func main() {
-    err := InitSec()
+    err := initConfig()
+    if err != nil {
+        panic(err)
+    }
+
+    err = InitSec()
     if err != nil {
         logs.Error(err)
+        return 
     }
-    logs.Debug("init all success")
+
 
     beego.Run()
 }

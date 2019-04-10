@@ -3,7 +3,7 @@ package router
 import (
     "github.com/astaxie/beego"
     "github.com/astaxie/beego/logs"
-    "go_dev/SecKill/SecProxy/controller"
+    "MyGitHubProject/SrcKillProject/Seckill-system/SecProxy/controller"
 )
 
 func init() {

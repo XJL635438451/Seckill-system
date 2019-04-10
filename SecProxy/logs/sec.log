@@ -1,0 +1,223 @@
+2019/04/10 16:10:26.436 [D] [init.go:185]  Starting to init redis.
+2019/04/10 16:10:27.197 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 16:10:27.197 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 16:10:27.205 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 16:10:27.205 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 16:13:31.284 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 16:13:31.284 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[] {{0 0} 0 0 0 0}}
+2019/04/10 16:13:31.285 [I] [main.go:15]  init sec succ
+2019/04/10 16:13:31.286 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 16:13:44.729 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 16:21:32.787 [D] [asm_amd64.s:1337]  get config from etcd, PUT "/taobao/backend/secskill/product" : "[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]"
+
+2019/04/10 16:21:32.787 [D] [asm_amd64.s:1337]  get config from etcd succ, [{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]
+2019/04/10 16:57:29.911 [D] [init.go:185]  Starting to init redis.
+2019/04/10 16:57:29.924 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 16:57:29.925 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 16:57:29.938 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 16:57:29.938 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 16:57:30.257 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 16:57:30.257 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 16:57:30.257 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 16:57:30.257 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0000305d0 1029:0xc0000305d0] {{0 0} 0 0 0 0}}
+2019/04/10 16:57:30.257 [I] [main.go:15]  init sec succ
+2019/04/10 16:57:30.258 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 16:57:31.067 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 17:01:17.476 [D] [server.go:2774]  |            ::1|[43m 404 [0m|          1ms| nomatch|[44m GET     [0m /product_id
+2019/04/10 17:01:18.333 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.0001ms| nomatch|[44m GET     [0m /favicon.ico
+2019/04/10 17:01:48.880 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /product_id
+2019/04/10 17:03:46.208 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /product_id/
+2019/04/10 17:03:48.088 [D] [server.go:2774]  |            ::1|[43m 404 [0m|          1ms| nomatch|[44m GET     [0m /product_id/
+2019/04/10 17:03:48.971 [D] [server.go:2774]  |            ::1|[43m 404 [0m|          1ms| nomatch|[44m GET     [0m /product_id/
+2019/04/10 17:04:26.949 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.0001ms| nomatch|[44m GET     [0m /  
+2019/04/10 17:04:47.828 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /product_id
+2019/04/10 17:05:31.389 [D] [server.go:2774]  |            ::1|[43m 404 [0m|          1ms| nomatch|[44m GET     [0m /  
+2019/04/10 17:05:37.345 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /  
+2019/04/10 17:05:49.819 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:06:21.505 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:06:26.974 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:15.371 [D] [init.go:185]  Starting to init redis.
+2019/04/10 17:11:15.527 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 17:11:15.528 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 17:11:15.540 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 17:11:15.540 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 17:11:15.862 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 17:11:15.862 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 17:11:15.863 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 17:11:15.863 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc000162870 1029:0xc000162870] {{0 0} 0 0 0 0}}
+2019/04/10 17:11:15.863 [I] [main.go:15]  init sec succ
+2019/04/10 17:11:15.922 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 17:11:16.689 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 17:11:25.142 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:27.185 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:33.831 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:35.280 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:35.860 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:36.344 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:36.543 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:36.751 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:36.949 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:37.149 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:37.349 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:37.542 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:37.734 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:37.915 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:38.102 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:38.301 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:38.696 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:38.896 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:39.095 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:39.296 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:11:44.074 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.0001ms| nomatch|[44m GET     [0m /seckil
+2019/04/10 17:11:59.185 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /seckil
+2019/04/10 17:12:06.211 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /seckill   r:/seckill
+2019/04/10 17:13:01.822 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.0001ms| nomatch|[44m GET     [0m /SecInfo
+2019/04/10 17:13:17.660 [E] [value.go:447]  Invalid request, get product_id failed, Error: strconv.Atoi: parsing "": invalid syntax
+2019/04/10 17:13:17.660 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:13:36.778 [E] [value.go:447]  Invalid request, get product_id failed, Error: strconv.Atoi: parsing "": invalid syntax
+2019/04/10 17:13:36.778 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:12.679 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:12.679 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:12.679 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:15.910 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:15.910 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:15.910 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:18.497 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:18.497 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:18.497 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:22.013 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:22.013 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:22.013 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:22.632 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:22.632 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:22.634 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:23.269 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:23.269 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:23.269 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:23.485 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:23.485 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:23.486 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:23.683 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:23.683 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:23.683 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:23.867 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:23.868 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:23.868 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:24.052 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:24.052 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:24.052 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:53.424 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:53.424 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:53.424 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:15:56.684 [D] [value.go:447]  Get productId success. productId: 1000
+2019/04/10 17:15:56.684 [E] [value.go:447]  Invalid request, get product_id failed, Error: not found product_id:1000
+2019/04/10 17:15:56.684 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:17:32.017 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:17:32.017 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:09.431 [D] [init.go:185]  Starting to init redis.
+2019/04/10 17:19:09.462 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 17:19:09.462 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 17:19:09.484 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 17:19:09.484 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 17:19:09.791 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 17:19:09.791 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 17:19:09.791 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 17:19:09.792 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc000278120 1029:0xc000278120] {{0 0} 0 0 0 0}}
+2019/04/10 17:19:09.792 [I] [main.go:15]  init sec succ
+2019/04/10 17:19:09.792 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 17:19:10.239 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 17:19:14.739 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:14.739 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:15.505 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:15.505 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:16.078 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:16.078 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:16.659 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:16.659 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:17.178 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:17.178 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:17.660 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:17.660 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:17.878 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:17.878 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:18.095 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:18.095 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:18.282 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:18.282 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:18.509 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:18.509 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:18.723 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:18.724 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:18.922 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:18.923 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:19.136 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:19.137 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:19.299 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:19.300 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:20.981 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:20.981 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:23.475 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:23.475 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:29.412 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:29.413 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:31.360 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:31.360 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:19:32.867 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:19:32.867 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:20:24.572 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:20:24.572 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:20:34.650 [D] [init.go:185]  Starting to init redis.
+2019/04/10 17:20:34.669 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 17:20:34.669 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 17:20:34.682 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 17:20:34.682 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 17:20:35.011 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 17:20:35.011 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 17:20:35.011 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 17:20:35.011 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0001628d0 1029:0xc0001628d0] {{0 0} 0 0 0 0}}
+2019/04/10 17:20:35.012 [I] [main.go:15]  init sec succ
+2019/04/10 17:20:35.015 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 17:20:49.179 [D] [init.go:185]  Starting to init redis.
+2019/04/10 17:20:49.194 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 17:20:49.195 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 17:20:49.209 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 17:20:49.209 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 17:20:49.536 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 17:20:49.537 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 17:20:49.537 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 17:20:49.537 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc0002a4120 1029:0xc0002a4120] {{0 0} 0 0 0 0}}
+2019/04/10 17:20:49.537 [I] [main.go:15]  init sec succ
+2019/04/10 17:20:49.549 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 17:20:50.059 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 17:20:52.939 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:20:52.939 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.0004ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:20:53.874 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:20:53.874 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:20:54.373 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:20:54.374 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:20:56.290 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:20:56.290 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:21:00.587 [D] [value.go:447]  Get productId success. productId: 102
+2019/04/10 17:21:00.587 [E] [value.go:447]  Not found product_id:102
+2019/04/10 17:21:00.587 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:21:49.950 [D] [init.go:185]  Starting to init redis.
+2019/04/10 17:21:49.972 [D] [init.go:185]  Successfully initialized redis.
+2019/04/10 17:21:49.972 [D] [init.go:190]  Starting to init etcd.
+2019/04/10 17:21:49.987 [D] [init.go:190]  Successfully initialized etcd.
+2019/04/10 17:21:49.987 [D] [init.go:195]  Starting to load sec config.
+2019/04/10 17:21:50.303 [D] [init.go:195]  key[0] valud[key:"/taobao/backend/secskill/product" create_revision:25 mod_revision:25 version:1 value:"[{\"ProductId\":1029,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":1000,\"Left\":1000},{\"ProductId\":1027,\"StartTime\":1505008800,\"EndTime\":1505012400,\"Status\":0,\"Total\":2000,\"Left\":1000}]" ]
+2019/04/10 17:21:50.303 [D] [init.go:195]  Get sec conf info success. it is [[{1029 1505008800 1505012400 0 1000 1000} {1027 1505008800 1505012400 0 2000 1000}]]
+2019/04/10 17:21:50.303 [D] [init.go:195]  Successfully load sec config.
+2019/04/10 17:21:50.303 [D] [init.go:200]  Init service succ, config: &{{localhost:6379 64 0 300} {localhost:2379 5 /taobao/backend/secskill/ /taobao/backend/secskill/product} {./logs/sec.log debug} map[1027:0xc000162870 1029:0xc000162870] {{0 0} 0 0 0 0}}
+2019/04/10 17:21:50.303 [I] [main.go:15]  init sec succ
+2019/04/10 17:21:50.320 [D] [asm_amd64.s:1337]  Begin watch key: /taobao/backend/secskill/product
+2019/04/10 17:21:50.638 [I] [asm_amd64.s:1337]  http server Running on http://0.0.0.0:9091
+2019/04/10 17:21:54.330 [D] [value.go:447]  Get productId success. productId: 102
+2019/04/10 17:21:54.330 [E] [value.go:447]  Not found product_id:102
+2019/04/10 17:21:54.331 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:21:57.458 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:21:57.459 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          1ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:22:06.763 [D] [value.go:447]  Get productId success. productId: 1029
+2019/04/10 17:22:06.773 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.0006ms|   match|[44m GET     [0m /secinfo   r:/secinfo
+2019/04/10 17:22:26.890 [D] [value.go:447]  Get productId success. productId: 1027
+2019/04/10 17:22:26.891 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0001ms|   match|[44m GET     [0m /secinfo   r:/secinfo
